@@ -8,7 +8,7 @@ Simple MCP server to find the best ranked movie according to the genre.
 
 https://www.kaggle.com/datasets/bhargavchirumamilla/netflix-movies-and-tv-shows-till-2025?
 
-### Configuring the environment
+### Setting up the environment
 
 Requirments: python 3, pip and uv (pip install uv)
 
@@ -21,12 +21,13 @@ Requirments: python 3, pip and uv (pip install uv)
 uv run .\server.py
 
 
-### Setting up a client (Claude)
+### Setting up the client (Claude)
 
 1. Open claude_desktop_configuration.json (%%USER_FOLDER%%\AppData\Roaming\Claude\claude_desktop_config.json)
 
 2. Register the tool
 
+```
 {
   "mcpServers": {
     "netflix-movie-finder": {
@@ -40,7 +41,10 @@ uv run .\server.py
     }
   }
 }
+```
 
 3. Restart Claude
 
-4. ![Tool registered in the Claude chat](assets/tools_claude.png)
+4. Check if the tool is registered 
+
+![Tool registered in the Claude chat](assets/tools_claude.png)
