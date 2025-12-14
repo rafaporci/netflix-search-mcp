@@ -23,9 +23,16 @@ server will be running at http://127.0.0.1:8000/mcp
 
 ### Setting up the client (Claude)
 
-1. Open claude_desktop_configuration.json (%%USER_FOLDER%%\AppData\Roaming\Claude\claude_desktop_config.json)
+1. Installation should be done via uv for now:
 
-2. Register the tool
+Create a new virtual environment: uv venv
+Activate venv (source .venv/bin/activate for linux/mac or .venv/Scripts/activate for Windows)
+Install requirements pip install -r requirements.txt
+uv run .\server.py
+
+2. Open claude_desktop_configuration.json (%%USER_FOLDER%%\AppData\Roaming\Claude\claude_desktop_config.json)
+
+3. Register the tool
 
 ```
 {
@@ -43,9 +50,9 @@ server will be running at http://127.0.0.1:8000/mcp
 }
 ```
 
-3. Restart Claude
+4. Restart Claude
 
-4. Check if the tool is registered 
+5. Check if the tool is registered 
 
 ![Tool registered in the Claude chat](assets/tools_claude.png)
 
