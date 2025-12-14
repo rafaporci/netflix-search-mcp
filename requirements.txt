@@ -1,2 +1,2 @@
-mcp[cli]
+fastmcp
 pandas

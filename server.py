@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from movies_reader import find_movies
 
 mcp = FastMCP("Netflix Movie Finder", "1.0")
@@ -14,5 +14,6 @@ def find_movies_tool(country: str, genre: str, year: int) -> list[str]:
 
 if __name__ == "__main__":
     # Initialize and run the server
-    mcp.run(transport='stdio')
+    print('Initializing MCP server...')
+    mcp.run(transport="http", host="127.0.0.1", port=8000)
     #print(find_movies_tool("United States Of America", "Comedy", 2025))
